@@ -1,0 +1,334 @@
+#github-link {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    height: 40px;
+    width: 40px;
+    z-index: 10;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-image: url("mjplogo.png");
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.4;
+    transition: all 0.25s;
+}
+
+#github-link:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 6px #efefef;
+}
+
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: repeating-linear-gradient(-92deg, #099090, #47ffff, #47ffff, #001b1b);
+    background-size: 8.33vw;
+  }
+  
+  .content {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  
+  .mirror {
+    width: 8.33vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #fff 0 calc(50% + 21vmin), #b4b4b4 0 100%);
+    border-right: 0.25vmin solid #0079da61;
+    border-left: 0.25vmin solid #56b4ff45;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: transform 0.5s ease 0.05s;
+    transform-style: preserve-3d;
+    opacity: 0.825;
+    position: relative;
+    animation: move 1s ease-out 1.1s 2;
+  }
+  .mirror:hover {
+    transform: rotateY(25deg);
+    transition: transform 0.1s ease 0s;
+    opacity: 0.865;
+  }
+  .mirror:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 50%, #fff8 80%, transparent 100%);
+    background-size: 100%;
+    position: absolute;
+    z-index: 1;
+    transition: all 0.5s ease 0s;
+    transform-style: preserve-3d;
+    animation: shine 1s ease-out 0s 2;
+  }
+  .mirror:hover:before {
+    background-position: -4vmin 0vmin;
+    background-size: 125%;
+    transition: all 0.35s ease 0s 2;
+  }
+  .mirror:after {
+    content: "";
+    width: 100%;
+    height: 3%;
+    background: linear-gradient(0deg, #ffffff6b 50%, #ffffff88 80%, #ffffff6b 100%);
+    background-size: 100%;
+    position: absolute;
+    z-index: 1;
+    transform: skewY(-46deg);
+    transition: all 0.5s ease 0s;
+    transform-style: preserve-3d;
+    opacity: 0.4;
+    top: 28%;
+    animation: reflex 1s ease-out 0s 2;
+  }
+  .mirror:hover:after {
+    transform: skewY(-45deg);
+    transition: all 0.5s ease 0s;
+    top: 50%;
+    opacity: 0.15;
+  }
+  
+  /*** end .mirror ***/
+  @keyframes move {
+    10% {
+      transform: rotateY(25deg);
+      opacity: 0.865;
+    }
+  }
+  @keyframes shine {
+    10% {
+      background-position: -4vmin 0vmin;
+      background-size: 125%;
+      transition: all 0.35s ease 0s;
+    }
+  }
+  @keyframes reflex {
+    10% {
+      transform: skewY(-45deg);
+      transition: all 0.5s ease 0s;
+      top: 50%;
+      opacity: 0.15;
+    }
+  }
+  /***
+  Bruce Lee image vector from VectorStock by arhdesign:
+  https://www.vectorstock.com/royalty-free-vector/bruce-lee-martial-art-legend-figure-concept-vector-34422393
+  ***/
+  .bruce {
+    width: 50vmin;
+    height: 80vmin;
+    background: url(https://cdn4.vectorstock.com/i/1000x1000/23/93/bruce-lee-martial-art-legend-figure-concept-vector-34422393.jpg) no-repeat center top;
+    background-size: 170%;
+    left: 0;
+    background-color: #ff00001f;
+    transform: rotateY(180deg);
+    top: calc(50% - 40vmin);
+    position: relative;
+  }
+  .bruce .claws span {
+    position: absolute;
+    background: red;
+    width: 12%;
+    height: 0.4%;
+    top: 39.5%;
+    right: 30%;
+    border-radius: 100%;
+    transform: rotate(-5deg);
+    box-shadow: 0 1vmin 0 0vmin red, 0 -1vmin 0 0vmin red;
+  }
+  .bruce .claws span + span {
+    top: 33.5%;
+    width: 5%;
+    right: 40%;
+    transform: rotate(25deg);
+    box-shadow: 0 0.65vmin 0 0vmin red, 1.1vmin 0.65vmin 0 0vmin red, 0.5vmin 0vmin 0 0vmin red, 0 -0.65vmin 0 0vmin red, 0.2vmin -1.35vmin 0 0vmin red;
+  }
+  .bruce .claws span + span + span {
+    top: 23.5%;
+    width: 3%;
+    right: 38.5%;
+    transform: rotate(62deg) scale(0.9);
+    box-shadow: 0.35vmin 0vmin 0 0vmin red, 0 -0.6vmin 0 0vmin red, 0.2vmin -1.25vmin 0 0vmin red;
+    height: 0.3%;
+    border-top: 1px solid red;
+    border-radius: 100% 0;
+    filter: blur(0.1px);
+  }
+  
+  /* for loop */
+  .mirror:nth-child(1) .bruce {
+    left: 40%;
+  }
+  
+  .mirror:nth-child(2) .bruce {
+    left: 20%;
+  }
+  
+  .mirror:nth-child(3) .bruce {
+    left: 0%;
+  }
+  
+  .mirror:nth-child(4) .bruce {
+    left: -20%;
+  }
+  
+  .mirror:nth-child(5) .bruce {
+    left: -80%;
+  }
+  
+  .mirror:nth-child(6) .bruce {
+    left: -140%;
+  }
+  
+  .mirror:nth-child(7) .bruce {
+    left: -200%;
+  }
+  
+  .mirror:nth-child(8) .bruce {
+    left: -240%;
+  }
+  
+  .mirror:nth-child(9) .bruce {
+    left: -280%;
+  }
+  
+  .mirror:nth-child(10) .bruce {
+    left: -320%;
+  }
+  
+  .mirror:nth-child(11) .bruce {
+    left: -360%;
+  }
+  
+  .mirror:nth-child(12) .bruce {
+    left: -400%;
+  }
+  
+  .mirror:nth-child(1),
+  .mirror:nth-child(1):before,
+  .mirror:nth-child(1):after {
+    animation-delay: 1.1s;
+  }
+  
+  .mirror:nth-child(2),
+  .mirror:nth-child(2):before,
+  .mirror:nth-child(2):after {
+    animation-delay: 1.2s;
+  }
+  
+  .mirror:nth-child(3),
+  .mirror:nth-child(3):before,
+  .mirror:nth-child(3):after {
+    animation-delay: 1.3s;
+  }
+  
+  .mirror:nth-child(4),
+  .mirror:nth-child(4):before,
+  .mirror:nth-child(4):after {
+    animation-delay: 1.4s;
+  }
+  
+  .mirror:nth-child(5),
+  .mirror:nth-child(5):before,
+  .mirror:nth-child(5):after {
+    animation-delay: 1.5s;
+  }
+  
+  .mirror:nth-child(6),
+  .mirror:nth-child(6):before,
+  .mirror:nth-child(6):after {
+    animation-delay: 1.6s;
+  }
+  
+  .mirror:nth-child(7),
+  .mirror:nth-child(7):before,
+  .mirror:nth-child(7):after {
+    animation-delay: 1.7s;
+  }
+  
+  .mirror:nth-child(8),
+  .mirror:nth-child(8):before,
+  .mirror:nth-child(8):after {
+    animation-delay: 1.8s;
+  }
+  
+  .mirror:nth-child(9),
+  .mirror:nth-child(9):before,
+  .mirror:nth-child(9):after {
+    animation-delay: 1.9s;
+  }
+  
+  .mirror:nth-child(10),
+  .mirror:nth-child(10):before,
+  .mirror:nth-child(10):after {
+    animation-delay: 2s;
+  }
+  
+  .mirror:nth-child(11),
+  .mirror:nth-child(11):before,
+  .mirror:nth-child(11):after {
+    animation-delay: 2.1s;
+  }
+  
+  .mirror:nth-child(12),
+  .mirror:nth-child(12):before,
+  .mirror:nth-child(12):after {
+    animation-delay: 1.2s;
+  }
+  
+  .floor {
+    position: absolute;
+    background: #b4b4b4;
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+  }
+  .floor:before {
+    content: "";
+    background: #b4b4b4;
+    width: 16%;
+    height: 137%;
+    position: absolute;
+    top: -137%;
+  }
+  .floor:after {
+    content: "";
+    background: #b4b4b4;
+    width: 16%;
+    height: 140%;
+    position: absolute;
+    top: -138%;
+    right: 0;
+  }
+  .floor span {
+    background: #b4b4b4;
+    width: 16%;
+    height: 34%;
+    position: absolute;
+    bottom: 204%;
+    left: 10.65%;
+    border-radius: 0 5% 57% 0%;
+  }
+  .floor span:before, .floor span:after {
+    content: "";
+    background: #b4b4b4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 408%;
+    border-radius: 0 0 5% 73%;
+    bottom: 0%;
+  }
+  .floor span:after {
+    border-radius: 0;
+    bottom: -320%;
+  }
